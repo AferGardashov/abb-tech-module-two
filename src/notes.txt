@@ -1,7 +1,7 @@
 TOMCAT
 How to run an application on tomcat:
 
-1. Set an admin for tomcat:
+1. Set an user for tomcat:
 FILE:
 \conf\tomcat-users.xml
 CODE:
