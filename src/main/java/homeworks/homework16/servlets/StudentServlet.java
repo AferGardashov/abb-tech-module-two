@@ -1,10 +1,10 @@
-package exercises.test.servlets;
+package homeworks.homework16.servlets;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import exercises.test.dto.StudentDto;
-import exercises.test.exeptions.BadRequestException;
-import exercises.test.exeptions.BaseExceptionDto;
-import exercises.test.service.StudentService;
+import homeworks.homework16.dto.StudentDto;
+import homeworks.homework16.exeptions.BadRequestException;
+import homeworks.homework16.exeptions.BaseExceptionDto;
+import homeworks.homework16.service.StudentService;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;

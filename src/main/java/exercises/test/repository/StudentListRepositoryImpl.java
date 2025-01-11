@@ -2,7 +2,6 @@ package exercises.test.repository;
 
 import exercises.test.dto.StudentDto;
 
-import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -17,14 +16,22 @@ public class StudentListRepositoryImpl implements StudentRepository {
 
     @Override
     public List<StudentDto> findAll() {
-        STUDENTS.add(new StudentDto("Test", 5, BigDecimal.valueOf(105)));
-
         return STUDENTS;
     }
 
     @Override
     public void removeById(int id) {
-        List<StudentDto> students = findAll();
-        students.removeIf(student -> student.id() == id);
+        findAll().removeIf(student -> student.id() == id);
     }
+
+    @Override
+    public StudentDto findById(int id) {
+        for (StudentDto student : findAll()) {
+            if (student.id() == id) {
+                return student;
+            }
+        }
+        return null;
+    }
+
 }

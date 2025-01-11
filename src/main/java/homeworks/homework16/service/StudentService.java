@@ -1,7 +1,7 @@
-package exercises.test.service;
+package homeworks.homework16.service;
 
-import exercises.test.dto.StudentDto;
-import exercises.test.exeptions.BadRequestException;
+import homeworks.homework16.dto.StudentDto;
+import homeworks.homework16.exeptions.BadRequestException;
 
 import java.util.List;
 

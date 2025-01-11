@@ -1,9 +1,9 @@
-package exercises.test.context;
+package homeworks.homework16.context;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import exercises.test.repository.StudentListRepositoryImpl;
-import exercises.test.service.StudentService;
-import exercises.test.service.StudentServiceImpl;
+import homeworks.homework16.repository.StudentListRepositoryImpl;
+import homeworks.homework16.service.StudentService;
+import homeworks.homework16.service.StudentServiceImpl;
 import jakarta.servlet.ServletContextEvent;
 import jakarta.servlet.ServletContextListener;
 import jakarta.servlet.annotation.WebListener;

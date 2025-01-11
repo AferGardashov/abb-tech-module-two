@@ -1,8 +1,8 @@
-package exercises.test.service;
+package homeworks.homework16.service;
 
-import exercises.test.dto.StudentDto;
-import exercises.test.exeptions.BadRequestException;
-import exercises.test.repository.StudentRepository;
+import homeworks.homework16.dto.StudentDto;
+import homeworks.homework16.exeptions.BadRequestException;
+import homeworks.homework16.repository.StudentRepository;
 
 import java.math.BigDecimal;
 import java.util.List;
