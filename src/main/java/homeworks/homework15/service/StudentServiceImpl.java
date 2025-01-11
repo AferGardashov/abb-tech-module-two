@@ -5,7 +5,7 @@ import homeworks.homework15.repository.StudentRepository;
 
 import java.util.List;
 
-public class StudentServiceImpl implements StudentService{
+public class StudentServiceImpl implements StudentService {
 
     private final StudentRepository studentRepository;
 
@@ -26,5 +26,10 @@ public class StudentServiceImpl implements StudentService{
     @Override
     public void removeById(Integer id) {
         studentRepository.removeById(id);
+    }
+
+    @Override
+    public StudentDto findById(Integer id) {
+        return studentRepository.findById(id);
     }
 }

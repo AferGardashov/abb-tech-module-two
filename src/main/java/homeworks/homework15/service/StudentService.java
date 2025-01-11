@@ -11,4 +11,6 @@ public interface StudentService {
     List<StudentDto> findAll();
 
     void removeById(Integer id);
+
+    StudentDto findById(Integer id);
 }

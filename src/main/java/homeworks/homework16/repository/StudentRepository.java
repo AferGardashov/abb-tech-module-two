@@ -1,6 +1,6 @@
-package exercises.test.repository;
+package homeworks.homework16.repository;
 
-import exercises.test.dto.StudentDto;
+import homeworks.homework16.dto.StudentDto;
 
 import java.util.List;
 

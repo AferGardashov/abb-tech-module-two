@@ -11,4 +11,6 @@ public interface StudentRepository {
     List<StudentDto> findAll();
 
     void removeById(int id);
+
+    StudentDto findById(int id);
 }

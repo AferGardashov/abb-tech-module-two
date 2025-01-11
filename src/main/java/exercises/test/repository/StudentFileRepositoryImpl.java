@@ -1,6 +1,6 @@
-package homeworks.homework15.repository;
+package exercises.test.repository;
 
-import homeworks.homework15.dto.StudentDto;
+import exercises.test.dto.StudentDto;
 
 import java.io.*;
 import java.math.BigDecimal;

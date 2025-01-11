@@ -1,4 +1,4 @@
-package exercises.test.dto;
+package homeworks.homework16.dto;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
