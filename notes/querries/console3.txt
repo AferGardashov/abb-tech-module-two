@@ -1,0 +1,9 @@
+create table student_service.class
+(
+    id   serial primary key,
+    name varchar(50) not null
+);
+
+
+insert into student_service.class(name) values ('English')
+

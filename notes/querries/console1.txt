@@ -1,0 +1,15 @@
+create table student_service.student(
+    id serial primary key,
+    name varchar(100) not null,
+    scholarshipAmount decimal(10,2)
+);
+
+
+insert into student_service.student
+(name, scholarshipAmount) values ('Name', 260.676767);
+
+
+update student_service.student set name='New Name', scholarshipAmount = 150 where id = 1;
+
+
+select * from student_service.student;

@@ -15,7 +15,7 @@ public class Main {
     public static void main(String[] args) {
         Main main = new Main();
         StudentService studentService;
-        String path = "C:\\Users\\009046\\IdeaProjects\\ABB Tech\\abb-tech-module-two\\src\\test.txt";
+        String path = "C:\\Users\\009046\\IdeaProjects\\ABB Tech\\abb-tech-module-two\\src\\main\\java\\homeworks\\homework15\\test.txt";
 
         System.out.println("Where do you want to add or get student data: ");
         System.out.println("Options: ");

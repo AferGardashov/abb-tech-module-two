@@ -26,9 +26,11 @@ ext {
     set('jUnitMockitoVersion', "5.14.2")
     set('jakartaVersion', '6.1.0-M2')
     set('jacksonVersion', '2.18.2')
+    set('postgresVersion', '42.6.0')
 }
 dependencies {
     implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: "${jacksonVersion}"
+    implementation group: 'org.postgresql', name: 'postgresql', version: "${postgresVersion}"
 
     compileOnly group: 'jakarta.servlet', name: 'jakarta.servlet-api', version: "${jakartaVersion}"
     testImplementation "org.junit.jupiter:junit-jupiter-engine:${jUnitVersion}"
