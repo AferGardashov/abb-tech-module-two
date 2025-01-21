@@ -1,4 +1,4 @@
-package exercises.backup.JDBC_with_statements.dto;
+package exercises.jdbc_statements.dto;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
