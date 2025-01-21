@@ -1,4 +1,4 @@
-package exercises.test.exeptions;
+package jdbc_statements.exeptions;
 
 public class BadRequestException extends Exception {
 

@@ -1,10 +1,10 @@
-package exercises.test.servlets;
+package jdbc_statements.servlets;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import exercises.test.dto.StudentDto;
-import exercises.test.exeptions.BadRequestException;
-import exercises.test.exeptions.BaseExceptionDto;
-import exercises.test.service.StudentService;
+import jdbc_statements.dto.StudentDto;
+import jdbc_statements.exeptions.BadRequestException;
+import jdbc_statements.exeptions.BaseExceptionDto;
+import jdbc_statements.service.StudentService;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;

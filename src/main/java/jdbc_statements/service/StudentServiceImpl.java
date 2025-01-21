@@ -1,8 +1,8 @@
-package exercises.test.service;
+package jdbc_statements.service;
 
-import exercises.test.dto.StudentDto;
-import exercises.test.exeptions.BadRequestException;
-import exercises.test.repository.StudentRepository;
+import jdbc_statements.dto.StudentDto;
+import jdbc_statements.exeptions.BadRequestException;
+import jdbc_statements.repository.StudentRepository;
 
 import java.math.BigDecimal;
 import java.util.List;

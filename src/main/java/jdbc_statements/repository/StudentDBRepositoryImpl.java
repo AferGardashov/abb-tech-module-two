@@ -1,6 +1,6 @@
-package exercises.backup.JDBC_with_statements.repository;
+package jdbc_statements.repository;
 
-import exercises.backup.JDBC_with_statements.dto.StudentDto;
+import jdbc_statements.dto.StudentDto;
 
 import java.sql.*;
 import java.util.ArrayList;

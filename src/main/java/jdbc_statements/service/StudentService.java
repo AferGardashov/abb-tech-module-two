@@ -1,7 +1,7 @@
-package exercises.backup.JDBC_with_statements.service;
+package jdbc_statements.service;
 
-import exercises.backup.JDBC_with_statements.dto.StudentDto;
-import exercises.backup.JDBC_with_statements.exeptions.BadRequestException;
+import jdbc_statements.dto.StudentDto;
+import jdbc_statements.exeptions.BadRequestException;
 
 import java.util.List;
 
