@@ -1,7 +1,7 @@
-package homeworks.homework15.service;
+package homework15.service;
 
-import homeworks.homework15.dto.StudentDto;
-import homeworks.homework15.repository.StudentRepository;
+import homework15.dto.StudentDto;
+import homework15.repository.StudentRepository;
 
 import java.util.List;
 

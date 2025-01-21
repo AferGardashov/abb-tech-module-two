@@ -1,6 +1,6 @@
-package homeworks.homework16.repository;
+package homework15.repository;
 
-import homeworks.homework16.dto.StudentDto;
+import homework15.dto.StudentDto;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,6 +16,9 @@ public class StudentListRepositoryImpl implements StudentRepository {
 
     @Override
     public List<StudentDto> findAll() {
+        if (STUDENTS.isEmpty()) {
+            System.out.println("No students found");
+        }
         return STUDENTS;
     }
 

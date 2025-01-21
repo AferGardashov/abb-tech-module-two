@@ -1,10 +1,10 @@
-package homeworks.homework15;
+package homework15;
 
-import homeworks.homework15.dto.StudentDto;
-import homeworks.homework15.repository.StudentFileRepositoryImpl;
-import homeworks.homework15.repository.StudentListRepositoryImpl;
-import homeworks.homework15.service.StudentService;
-import homeworks.homework15.service.StudentServiceImpl;
+import homework15.dto.StudentDto;
+import homework15.repository.StudentFileRepositoryImpl;
+import homework15.repository.StudentListRepositoryImpl;
+import homework15.service.StudentService;
+import homework15.service.StudentServiceImpl;
 
 import java.math.BigDecimal;
 import java.util.List;

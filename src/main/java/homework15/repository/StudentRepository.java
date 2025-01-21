@@ -1,6 +1,6 @@
-package exercises.backup.JDBC_with_statements.repository;
+package homework15.repository;
 
-import exercises.backup.JDBC_with_statements.dto.StudentDto;
+import homework15.dto.StudentDto;
 
 import java.util.List;
 
