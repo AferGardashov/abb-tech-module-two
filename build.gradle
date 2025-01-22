@@ -27,8 +27,10 @@ ext {
     set('jakartaVersion', '6.1.0-M2')
     set('jacksonVersion', '2.18.2')
     set('postgresVersion', '42.6.0')
+    set('hikariVersion', '6.2.1')
 }
 dependencies {
+    implementation group: 'com.zaxxer', name: 'HikariCP', version: "${hikariVersion}"
     implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: "${jacksonVersion}"
     implementation group: 'org.postgresql', name: 'postgresql', version: "${postgresVersion}"
 

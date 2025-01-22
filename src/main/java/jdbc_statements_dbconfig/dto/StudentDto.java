@@ -1,4 +1,4 @@
-package jdbc_statements.dto;
+package jdbc_statements_dbconfig.dto;
 
 import java.io.Serializable;
 import java.math.BigDecimal;

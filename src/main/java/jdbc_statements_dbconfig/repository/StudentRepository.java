@@ -1,6 +1,6 @@
-package jdbc_statements.repository;
+package jdbc_statements_dbconfig.repository;
 
-import jdbc_statements.dto.StudentDto;
+import jdbc_statements_dbconfig.dto.StudentDto;
 
 import java.util.List;
 

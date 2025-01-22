@@ -1,6 +1,7 @@
-package jdbc_statements.repository;
+package jdbc_statements_dbconfig.repository;
 
-import jdbc_statements.dto.StudentDto;
+import jdbc_statements_dbconfig.config.DBConfig;
+import jdbc_statements_dbconfig.dto.StudentDto;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -9,14 +10,9 @@ import java.util.List;
 public class StudentDBRepositoryImpl implements StudentRepository {
     @Override
     public void save(StudentDto studentDto) {
-        try {
-            Class.forName("org.postgresql.Driver");
-        } catch (ClassNotFoundException e) {
-            throw new RuntimeException(e);
-        }
 
         String insertQuery = "INSERT INTO student_service.student(name, scholarship_amount) VALUES (?,?)";
-        try (Connection connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/abb_tech", "postgres", "postgres");
+        try (Connection connection = DBConfig.getDataSource().getConnection();
              PreparedStatement preparedStatement = connection.prepareStatement(insertQuery)) {
             preparedStatement.setString(1, studentDto.name());
             preparedStatement.setBigDecimal(2, studentDto.scholarshipAmount());
@@ -28,15 +24,10 @@ public class StudentDBRepositoryImpl implements StudentRepository {
 
     @Override
     public List<StudentDto> findAll() {
-        try {
-            Class.forName("org.postgresql.Driver");
-        } catch (ClassNotFoundException e) {
-            throw new RuntimeException(e);
-        }
 
         String selectQuery = "select * from student_service.student";
         List<StudentDto> students = new ArrayList<>();
-        try (Connection connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/abb_tech", "postgres", "postgres");
+        try (Connection connection = DBConfig.getDataSource().getConnection();
              Statement statement = connection.createStatement()) {
             ResultSet resultSet = statement.executeQuery(selectQuery);
             while (resultSet.next()) {
@@ -58,14 +49,9 @@ public class StudentDBRepositoryImpl implements StudentRepository {
 
     @Override
     public StudentDto findById(int id) {
-        try {
-            Class.forName("org.postgresql.Driver");
-        } catch (ClassNotFoundException e) {
-            throw new RuntimeException(e);
-        }
 
         String selectQuery = "select * from student_service.student where id = ?";
-        try (Connection connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/abb_tech", "postgres", "postgres");
+        try (Connection connection = DBConfig.getDataSource().getConnection();
              PreparedStatement preparedStatement = connection.prepareStatement(selectQuery)) {
             preparedStatement.setLong(1, id);
             ResultSet resultSet = preparedStatement.executeQuery();

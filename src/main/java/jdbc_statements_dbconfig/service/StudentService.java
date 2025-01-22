@@ -1,7 +1,7 @@
-package jdbc_statements.service;
+package jdbc_statements_dbconfig.service;
 
-import jdbc_statements.dto.StudentDto;
-import jdbc_statements.exeptions.BadRequestException;
+import jdbc_statements_dbconfig.dto.StudentDto;
+import jdbc_statements_dbconfig.exeptions.BadRequestException;
 
 import java.util.List;
 

@@ -1,9 +1,9 @@
-package jdbc_statements.context;
+package jdbc_statements_dbconfig.context;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import jdbc_statements.repository.StudentDBRepositoryImpl;
-import jdbc_statements.service.StudentService;
-import jdbc_statements.service.StudentServiceImpl;
+import jdbc_statements_dbconfig.repository.StudentDBRepositoryImpl;
+import jdbc_statements_dbconfig.service.StudentService;
+import jdbc_statements_dbconfig.service.StudentServiceImpl;
 import jakarta.servlet.ServletContextEvent;
 import jakarta.servlet.ServletContextListener;
 import jakarta.servlet.annotation.WebListener;
