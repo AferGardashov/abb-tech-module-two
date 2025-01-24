@@ -2,11 +2,14 @@ plugins {
     id 'java'
     id 'war'
 }
+
 group = 'az.abbtech'
 version = '1.0'
+
 repositories {
     mavenCentral()
 }
+
 sourceSets {
     main {
         java {
@@ -17,52 +20,41 @@ sourceSets {
         }
     }
 }
+
+
 war {
     archivesBaseName = 'student-service'
 }
+
+
 ext {
     set('jUnitVersion', "5.10.2")
     set('jUnitMockitoCoreVersion', "5.11.0")
     set('jUnitMockitoVersion', "5.14.2")
     set('jakartaVersion', '6.1.0-M2')
-    set('jacksonVersion', '2.18.2')
-    set('postgresVersion', '42.6.0')
-    set('hikariVersion', '6.2.1')
-
+    set("jacksonVersion", "2.18.2")
+    set("postgresVersion", "42.7.4")
+    set("hikariCPVersion", "6.2.1")
+    set("bcryptVersion","6.4.2")
 }
+
 dependencies {
-    implementation group: 'com.zaxxer', name: 'HikariCP', version: "${hikariVersion}"
+    implementation group: 'com.zaxxer', name: 'HikariCP', version: "${hikariCPVersion}"
+
     implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: "${jacksonVersion}"
     implementation group: 'org.postgresql', name: 'postgresql', version: "${postgresVersion}"
+    implementation group: 'org.springframework.security', name: 'spring-security-crypto', version: "${bcryptVersion}"
+    implementation 'commons-logging:commons-logging:1.2'
+
 
     compileOnly group: 'jakarta.servlet', name: 'jakarta.servlet-api', version: "${jakartaVersion}"
+
     testImplementation "org.junit.jupiter:junit-jupiter-engine:${jUnitVersion}"
     testImplementation "org.mockito:mockito-core:${jUnitMockitoCoreVersion}"
     testImplementation "org.mockito:mockito-junit-jupiter:${jUnitMockitoVersion}"
+
 }
-//jar {
-//    manifest {
-//        attributes(
-//                'Main-Class': 'az.abbtech.Main'
-//        )
-//    }
-//    destinationDirectory.set(file("$buildDir/libs"))
-//}
-//tasks.register('fatJar', Jar) {
-//    group = 'build'
-//    description = 'Assembles a fat JAR including dependencies'
-//    archiveClassifier.set('fat')
-//    from sourceSets.main.output
-//    dependsOn configurations.runtimeClasspath
-//    from {
-//        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
-//    }
-//    manifest {
-//        attributes(
-//                'Main-Class': 'az.abbtech.Main'
-//        )
-//    }
-//}
+
 test {
     useJUnitPlatform()
     testLogging {
@@ -70,6 +62,7 @@ test {
         exceptionFormat "full"
     }
 }
+
 tasks.register('runTests', Test) {
     group = 'verification'
     description = 'Runs all Java tests'
