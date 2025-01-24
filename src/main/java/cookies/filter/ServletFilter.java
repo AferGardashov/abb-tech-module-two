@@ -1,4 +1,4 @@
-package test.filter;
+package cookies.filter;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.servlet.*;
@@ -6,8 +6,8 @@ import jakarta.servlet.annotation.WebFilter;
 import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import test.exeptions.BadRequestException;
-import test.exeptions.BaseExceptionDto;
+import cookies.exeptions.BadRequestException;
+import cookies.exeptions.BaseExceptionDto;
 
 import java.io.IOException;
 

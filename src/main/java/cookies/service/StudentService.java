@@ -1,7 +1,7 @@
-package test.service;
+package cookies.service;
 
-import test.dto.StudentDto;
-import test.exeptions.BadRequestException;
+import cookies.dto.StudentDto;
+import cookies.exeptions.BadRequestException;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package test.exeptions;
+package cookies.exeptions;
 
 public class BadRequestException extends Exception {
 

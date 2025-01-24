@@ -1,9 +1,9 @@
-package test.context;
+package cookies.context;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import test.repository.StudentDBRepositoryImpl;
-import test.service.StudentService;
-import test.service.StudentServiceImpl;
+import cookies.repository.StudentDBRepositoryImpl;
+import cookies.service.StudentService;
+import cookies.service.StudentServiceImpl;
 import jakarta.servlet.ServletContextEvent;
 import jakarta.servlet.ServletContextListener;
 import jakarta.servlet.annotation.WebListener;

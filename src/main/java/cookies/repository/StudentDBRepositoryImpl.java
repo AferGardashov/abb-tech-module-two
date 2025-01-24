@@ -1,7 +1,7 @@
-package test.repository;
+package cookies.repository;
 
-import test.config.DBConfig;
-import test.dto.StudentDto;
+import cookies.config.DBConfig;
+import cookies.dto.StudentDto;
 
 import java.sql.*;
 import java.util.ArrayList;

@@ -1,4 +1,4 @@
-package test.dto;
+package cookies.dto;
 
 import java.io.Serializable;
 import java.math.BigDecimal;

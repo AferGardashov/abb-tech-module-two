@@ -1,6 +1,6 @@
-package test.repository;
+package cookies.repository;
 
-import test.dto.StudentDto;
+import cookies.dto.StudentDto;
 
 import java.util.List;
 

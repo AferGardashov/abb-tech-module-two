@@ -1,8 +1,8 @@
-package test.service;
+package cookies.service;
 
-import test.dto.StudentDto;
-import test.exeptions.BadRequestException;
-import test.repository.StudentRepository;
+import cookies.dto.StudentDto;
+import cookies.exeptions.BadRequestException;
+import cookies.repository.StudentRepository;
 
 import java.math.BigDecimal;
 import java.util.List;

@@ -1,4 +1,4 @@
-package test.dto;
+package cookies.dto;
 
 public record LoginDto(String username, String password) {
 }

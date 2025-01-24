@@ -1,4 +1,4 @@
-package test.servlets;
+package cookies.servlets;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.servlet.ServletException;
@@ -7,9 +7,9 @@ import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import test.dto.LoginDto;
-import test.exeptions.BadRequestException;
-import test.exeptions.BaseExceptionDto;
+import cookies.dto.LoginDto;
+import cookies.exeptions.BadRequestException;
+import cookies.exeptions.BaseExceptionDto;
 
 import java.io.IOException;
 import java.io.InputStream;
