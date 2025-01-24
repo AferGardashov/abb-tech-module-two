@@ -1,10 +1,10 @@
-package cookies.servlets;
+package authentication.servlets;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import cookies.dto.StudentDto;
-import cookies.exeptions.BadRequestException;
-import cookies.exeptions.BaseExceptionDto;
-import cookies.service.StudentService;
+import authentication.dto.StudentDto;
+import authentication.exeptions.BadRequestException;
+import authentication.exeptions.BaseExceptionDto;
+import authentication.service.StudentService;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;

@@ -1,7 +1,7 @@
-package cookies.repository;
+package authentication.repository;
 
-import cookies.config.DBConfig;
-import cookies.dto.StudentDto;
+import authentication.config.DBConfig;
+import authentication.dto.StudentDto;
 
 import java.sql.*;
 import java.util.ArrayList;

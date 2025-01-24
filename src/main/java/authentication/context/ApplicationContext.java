@@ -1,9 +1,9 @@
-package cookies.context;
+package authentication.context;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import cookies.repository.StudentDBRepositoryImpl;
-import cookies.service.StudentService;
-import cookies.service.StudentServiceImpl;
+import authentication.repository.StudentDBRepositoryImpl;
+import authentication.service.StudentService;
+import authentication.service.StudentServiceImpl;
 import jakarta.servlet.ServletContextEvent;
 import jakarta.servlet.ServletContextListener;
 import jakarta.servlet.annotation.WebListener;

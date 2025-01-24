@@ -1,7 +1,7 @@
-package cookies.service;
+package authentication.service;
 
-import cookies.dto.StudentDto;
-import cookies.exeptions.BadRequestException;
+import authentication.dto.StudentDto;
+import authentication.exeptions.BadRequestException;
 
 import java.util.List;
 

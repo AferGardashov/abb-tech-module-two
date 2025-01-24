@@ -1,4 +1,4 @@
-package cookies.dto;
+package authentication.dto;
 
 import java.io.Serializable;
 import java.math.BigDecimal;

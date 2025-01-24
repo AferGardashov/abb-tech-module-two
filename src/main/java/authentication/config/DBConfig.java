@@ -1,4 +1,4 @@
-package cookies.config;
+package authentication.config;
 
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;

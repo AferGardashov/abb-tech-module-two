@@ -1,6 +1,6 @@
-package cookies.repository;
+package authentication.repository;
 
-import cookies.dto.StudentDto;
+import authentication.dto.StudentDto;
 
 import java.util.List;
 

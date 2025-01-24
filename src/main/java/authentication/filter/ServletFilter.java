@@ -1,4 +1,4 @@
-package cookies.filter;
+package authentication.filter;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.servlet.*;
@@ -6,8 +6,8 @@ import jakarta.servlet.annotation.WebFilter;
 import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import cookies.exeptions.BadRequestException;
-import cookies.exeptions.BaseExceptionDto;
+import authentication.exeptions.BadRequestException;
+import authentication.exeptions.BaseExceptionDto;
 
 import java.io.IOException;
 
@@ -26,6 +26,16 @@ public class ServletFilter implements Filter {
             throws IOException, ServletException {
 
         HttpServletRequest request = (HttpServletRequest) servletRequest;
+
+        //Session based authentication
+        if (request.getSession().getAttribute("username") != null
+                && request.getSession().getAttribute("username")
+                .equals("cavidan.hatamov@gmail.com")) {
+            filterChain.doFilter(request, servletResponse);
+        }
+
+
+        //Cookie based authentication
         Cookie[] cookies = request.getCookies();
         boolean authenticated = false;
         if (cookies != null) {

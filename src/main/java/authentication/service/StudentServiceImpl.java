@@ -1,8 +1,8 @@
-package cookies.service;
+package authentication.service;
 
-import cookies.dto.StudentDto;
-import cookies.exeptions.BadRequestException;
-import cookies.repository.StudentRepository;
+import authentication.dto.StudentDto;
+import authentication.exeptions.BadRequestException;
+import authentication.repository.StudentRepository;
 
 import java.math.BigDecimal;
 import java.util.List;

@@ -1,15 +1,12 @@
-package cookies.servlets;
+package authentication.servlets;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
-import jakarta.servlet.http.Cookie;
-import jakarta.servlet.http.HttpServlet;
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
-import cookies.dto.LoginDto;
-import cookies.exeptions.BadRequestException;
-import cookies.exeptions.BaseExceptionDto;
+import jakarta.servlet.http.*;
+import authentication.dto.LoginDto;
+import authentication.exeptions.BadRequestException;
+import authentication.exeptions.BaseExceptionDto;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -42,9 +39,17 @@ public class LoginServlet extends HttpServlet {
             LoginDto loginDto = objectMapper.readValue(builder.toString(), LoginDto.class);
 
             if(loginDto.username().equals(username) && loginDto.password().equals(password)) {
+
+                //Manage by HttpSession
+                HttpSession httpSession = req.getSession(true);
+                httpSession.setAttribute("username", username);
+                httpSession.setMaxInactiveInterval(1000);
+                httpSession.setAttribute("newAttribute", "attribute Value");
+
+                //Manage by Cookie
                 Cookie cooke = new Cookie("username", loginDto.username());
                 cooke.setPath("/");
-                cooke.setMaxAge(3000);
+                cooke.setMaxAge(1000);
                 cooke.setHttpOnly(true);
 //                cooke.setSecure(true);
                 resp.addCookie(cooke);
